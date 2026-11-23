@@ -1,0 +1,165 @@
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #263238;
+}
+
+/* 1. ENCABEZADO
+   display:flex organiza el logo y el menú horizontalmente.
+   justify-content:space-between los separa.
+   align-items:center los centra verticalmente. */
+
+.encabezado {
+    background: #ffffff;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #e17b45;
+    font-size: 28px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #263238;
+    font-weight: bold;
+}
+
+/* 2. PORTADA
+   Flexbox centra el contenido horizontal y verticalmente. */
+
+.portada {
+    min-height: 450px;
+    padding: 40px 8%;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.contenido h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contenido p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.boton {
+    display: inline-block;
+    background: #e17b45;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* 3. GALERÍA
+   flex-wrap permite que las tarjetas pasen a otra fila.
+   gap establece la separación entre ellas.
+   justify-content:center las centra. */
+
+.destinos {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.destinos h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+    flex: 1 1 230px;
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    padding-bottom: 20px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    margin: 15px 0 8px;
+}
+
+.tarjeta p {
+    color: #68737c;
+}
+
+/* 4. PIE DE PÁGINA
+   Flexbox distribuye el texto y el enlace. */
+
+.pie {
+    background: #263238;
+    color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.pie a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+    .encabezado,
+    .pie {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contenido h1 {
+        font-size: 30px;
+    }
+}
